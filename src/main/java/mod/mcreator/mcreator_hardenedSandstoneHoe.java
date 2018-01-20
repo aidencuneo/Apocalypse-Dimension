@@ -1,4 +1,4 @@
-
+package mod.mcreator;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.common.registry.GameRegistry;

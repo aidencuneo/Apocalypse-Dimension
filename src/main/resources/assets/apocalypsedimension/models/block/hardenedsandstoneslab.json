@@ -1,0 +1,6 @@
+{
+    "parent": "TestEnvironmentMod:block/HardenedSandstoneSlab_custom",
+    "textures": {
+        "0": "blocks/HardenedSandstone","particle": "blocks/HardenedSandstoneSlab","all": "blocks/HardenedSandstoneSlab"
+    }
+}

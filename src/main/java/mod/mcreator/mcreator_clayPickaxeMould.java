@@ -1,4 +1,4 @@
-
+package mod.mcreator;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraft.world.World;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.init.Items;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.Minecraft;
@@ -30,6 +31,11 @@ public class mcreator_clayPickaxeMould {
 		if (event.getSide() == Side.CLIENT)
 			Minecraft.getMinecraft().getRenderItem().getItemModelMesher()
 					.register(block, 0, new ModelResourceLocation("testenvironmentmod:ClayPickaxeMould", "inventory"));
+
+		GameRegistry.addRecipe(
+				new ItemStack(block, 1),
+				new Object[]{"012", "X4X", "X7X", Character.valueOf('0'), Items.CLAY_BALL, Character.valueOf('1'), Items.CLAY_BALL,
+						Character.valueOf('2'), Items.CLAY_BALL, Character.valueOf('4'), Items.STICK, Character.valueOf('7'), Items.STICK,});
 	}
 
 	public void generateNether(World world, Random random, int chunkX, int chunkZ) {

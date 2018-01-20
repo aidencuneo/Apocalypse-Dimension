@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "up": "blocks/crackedclayseamless","down": "blocks/crackedclayseamless","north": "blocks/crackedclayseamless","east": "blocks/crackedclayseamless","south": "blocks/crackedclayseamless","west": "blocks/crackedclayseamless","particle": "blocks/crackedclayseamless"
+    }
+}

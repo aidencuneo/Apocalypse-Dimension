@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=z": { "model": "apocalypsedimension:apocalypsedimension_portal_ew" },
+        "axis=x": { "model": "apocalypsedimension:apocalypsedimension_portal_ns" },
+		"inventory": { "model": "apocalypsedimension:apocalypsedimension_portal_ns" }
+    }
+}

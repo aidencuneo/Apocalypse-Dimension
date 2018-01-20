@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "up": "blocks/Side3&4&5&6CampfirePile","down": "blocks/Side3&4&5&6CampfirePile","north": "blocks/Side3&4&5&6CampfirePile","east": "blocks/Side1&2CampfirePile","south": "blocks/Side3&4&5&6CampfirePile","west": "blocks/Side1&2CampfirePile","particle": "blocks/Side3&4&5&6CampfirePile"
+    }
+}

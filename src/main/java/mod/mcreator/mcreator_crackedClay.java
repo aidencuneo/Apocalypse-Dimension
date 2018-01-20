@@ -1,4 +1,4 @@
-
+package mod.mcreator;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.fml.relauncher.Side;

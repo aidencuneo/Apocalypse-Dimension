@@ -1,4 +1,4 @@
-
+package mod.mcreator;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -24,17 +24,17 @@ import net.minecraft.entity.player.EntityPlayer;
 
 import java.util.Random;
 
-@Mod(modid = TestEnvironmentMod.MODID, version = TestEnvironmentMod.VERSION)
-public class TestEnvironmentMod implements IFuelHandler, IWorldGenerator {
+@Mod(modid = testenvironmentmod.MODID, version = testenvironmentmod.VERSION)
+public class testenvironmentmod implements IFuelHandler, IWorldGenerator {
 
 	public static final String MODID = "testenvironmentmod";
-	public static final String VERSION = "1.0";
+	public static final String VERSION = "1.4.1";
 
-	@SidedProxy(clientSide = "mod.mcreator.ClientProxyTestEnvironmentMod", serverSide = "mod.mcreator.CommonProxyTestEnvironmentMod")
-	public static CommonProxyTestEnvironmentMod proxy;
+	@SidedProxy(clientSide = "mod.mcreator.ClientProxytestenvironmentmod", serverSide = "mod.mcreator.CommonProxytestenvironmentmod")
+	public static CommonProxytestenvironmentmod proxy;
 
 	@Instance(MODID)
-	public static TestEnvironmentMod instance;
+	public static testenvironmentmod instance;
 
 	mcreator_woodPlanks mcreator_0 = new mcreator_woodPlanks();
 	mcreator_mushroomSnack mcreator_1 = new mcreator_mushroomSnack();
@@ -80,16 +80,15 @@ public class TestEnvironmentMod implements IFuelHandler, IWorldGenerator {
 	mcreator_clayHoeMould mcreator_41 = new mcreator_clayHoeMould();
 	mcreator_craftClaySwordMould mcreator_42 = new mcreator_craftClaySwordMould();
 	mcreator_craftClayAxeMould mcreator_43 = new mcreator_craftClayAxeMould();
-	mcreator_craftClayPickaxeMould mcreator_44 = new mcreator_craftClayPickaxeMould();
-	mcreator_craftClayShovelMould mcreator_45 = new mcreator_craftClayShovelMould();
-	mcreator_craftClayHoeMould mcreator_46 = new mcreator_craftClayHoeMould();
-	mcreator_ceramicSword mcreator_47 = new mcreator_ceramicSword();
-	mcreator_ceramicAxe mcreator_48 = new mcreator_ceramicAxe();
-	mcreator_ceramicPickaxe mcreator_49 = new mcreator_ceramicPickaxe();
-	mcreator_ceramicShovel mcreator_50 = new mcreator_ceramicShovel();
-	mcreator_ceramicHoe mcreator_51 = new mcreator_ceramicHoe();
-	mcreator_mortarAndPestle mcreator_52 = new mcreator_mortarAndPestle();
-	mcreator_thirstDroplet1 mcreator_53 = new mcreator_thirstDroplet1();
+	mcreator_craftClayShovelMould mcreator_44 = new mcreator_craftClayShovelMould();
+	mcreator_craftClayHoeMould mcreator_45 = new mcreator_craftClayHoeMould();
+	mcreator_ceramicSword mcreator_46 = new mcreator_ceramicSword();
+	mcreator_ceramicAxe mcreator_47 = new mcreator_ceramicAxe();
+	mcreator_ceramicPickaxe mcreator_48 = new mcreator_ceramicPickaxe();
+	mcreator_ceramicShovel mcreator_49 = new mcreator_ceramicShovel();
+	mcreator_ceramicHoe mcreator_50 = new mcreator_ceramicHoe();
+	mcreator_mortarAndPestle mcreator_51 = new mcreator_mortarAndPestle();
+	mcreator_thirstDroplet1 mcreator_52 = new mcreator_thirstDroplet1();
 
 	@Override
 	public int getBurnTime(ItemStack fuel) {
@@ -199,8 +198,6 @@ public class TestEnvironmentMod implements IFuelHandler, IWorldGenerator {
 			return mcreator_51.addFuel(fuel);
 		if (mcreator_52.addFuel(fuel) != 0)
 			return mcreator_52.addFuel(fuel);
-		if (mcreator_53.addFuel(fuel) != 0)
-			return mcreator_53.addFuel(fuel);
 		return 0;
 	}
 
@@ -421,10 +418,6 @@ public class TestEnvironmentMod implements IFuelHandler, IWorldGenerator {
 			mcreator_52.generateNether(world, random, chunkX, chunkZ);
 		if (world.provider.getDimension() == 0)
 			mcreator_52.generateSurface(world, random, chunkX, chunkZ);
-		if (world.provider.getDimension() == -1)
-			mcreator_53.generateNether(world, random, chunkX, chunkZ);
-		if (world.provider.getDimension() == 0)
-			mcreator_53.generateSurface(world, random, chunkX, chunkZ);
 
 	}
 
@@ -436,7 +429,7 @@ public class TestEnvironmentMod implements IFuelHandler, IWorldGenerator {
 		if (event.getSide() == Side.CLIENT) {
 			OBJLoader.INSTANCE.addDomain("testenvironmentmod");
 		}
-		MinecraftForge.EVENT_BUS.register(new mcreator_GlobalEventsTestEnvironmentMod());
+		MinecraftForge.EVENT_BUS.register(new mcreator_GlobalEventstestenvironmentmod());
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 		mcreator_0.load(event);
 		mcreator_1.load(event);
@@ -491,7 +484,6 @@ public class TestEnvironmentMod implements IFuelHandler, IWorldGenerator {
 		mcreator_50.load(event);
 		mcreator_51.load(event);
 		mcreator_52.load(event);
-		mcreator_53.load(event);
 		proxy.registerRenderers(this);
 
 	}
@@ -551,7 +543,6 @@ public class TestEnvironmentMod implements IFuelHandler, IWorldGenerator {
 		mcreator_50.serverLoad(event);
 		mcreator_51.serverLoad(event);
 		mcreator_52.serverLoad(event);
-		mcreator_53.serverLoad(event);
 	}
 
 	@EventHandler
@@ -609,7 +600,6 @@ public class TestEnvironmentMod implements IFuelHandler, IWorldGenerator {
 		mcreator_50.instance = this.instance;
 		mcreator_51.instance = this.instance;
 		mcreator_52.instance = this.instance;
-		mcreator_53.instance = this.instance;
 		mcreator_0.preInit(event);
 		mcreator_1.preInit(event);
 		mcreator_2.preInit(event);
@@ -663,7 +653,6 @@ public class TestEnvironmentMod implements IFuelHandler, IWorldGenerator {
 		mcreator_50.preInit(event);
 		mcreator_51.preInit(event);
 		mcreator_52.preInit(event);
-		mcreator_53.preInit(event);
 
 	}
 

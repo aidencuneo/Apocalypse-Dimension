@@ -1,4 +1,4 @@
-
+package mod.mcreator;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
@@ -21,7 +21,12 @@ public class mcreator_craftClayShovelMould {
 	public void load(FMLInitializationEvent event) {
 		ItemStack recStack = new ItemStack(mcreator_clayShovelMould.block, 1);
 
-		GameRegistry.addShapelessRecipe(recStack, new Object[]{Items.CLAY_BALL, Items.STICK, Items.STICK,});
+          GameRegistry.addRecipe(recStack, new Object[]{"BXX", "IXX", "IXX", Character.valueOf('B'), Items.CLAY_BALL, Character.valueOf('I'),
+                    Items.STICK,});
+          GameRegistry.addRecipe(recStack, new Object[]{"XBX", "XIX", "XIX", Character.valueOf('B'), Items.CLAY_BALL, Character.valueOf('I'),
+                    Items.STICK,});
+          GameRegistry.addRecipe(recStack, new Object[]{"XXB", "XXI", "XXI", Character.valueOf('B'), Items.CLAY_BALL, Character.valueOf('I'),
+                    Items.STICK,});
 	}
 
 	public void generateNether(World world, Random random, int chunkX, int chunkZ) {

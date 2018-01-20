@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "up": "blocks/HardenedSandstone","down": "blocks/HardenedSandstone","north": "blocks/HardenedSandstone","east": "blocks/HardenedSandstone","south": "blocks/HardenedSandstone","west": "blocks/HardenedSandstone","particle": "blocks/HardenedSandstone"
+    }
+}

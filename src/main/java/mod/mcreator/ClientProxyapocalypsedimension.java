@@ -1,9 +1,9 @@
+package mod.mcreator;
 
-
-public class ClientProxyTestEnvironmentMod extends CommonProxyTestEnvironmentMod {
+public class ClientProxytestenvironmentmod extends CommonProxytestenvironmentmod {
 
 	@Override
-	public void registerRenderers(TestEnvironmentMod ins) {
+	public void registerRenderers(testenvironmentmod ins) {
 		ins.mcreator_0.registerRenderers();
 		ins.mcreator_1.registerRenderers();
 		ins.mcreator_2.registerRenderers();
@@ -57,7 +57,6 @@ public class ClientProxyTestEnvironmentMod extends CommonProxyTestEnvironmentMod
 		ins.mcreator_50.registerRenderers();
 		ins.mcreator_51.registerRenderers();
 		ins.mcreator_52.registerRenderers();
-		ins.mcreator_53.registerRenderers();
 
 	}
 }
