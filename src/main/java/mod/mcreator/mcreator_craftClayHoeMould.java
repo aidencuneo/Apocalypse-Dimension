@@ -21,10 +21,7 @@ public class mcreator_craftClayHoeMould {
 	public void load(FMLInitializationEvent event) {
 		ItemStack recStack = new ItemStack(mcreator_clayHoeMould.block, 1);
 
-          GameRegistry.addRecipe(recStack, new Object[]{"BBX", "XIX", "XIX", Character.valueOf('B'), Items.CLAY_BALL, Character.valueOf('I'),
-                    Items.STICK,});
-          GameRegistry.addRecipe(recStack, new Object[]{"XBB", "XIX", "XIX", Character.valueOf('B'), Items.CLAY_BALL, Character.valueOf('I'),
-                    Items.STICK,});
+          GameRegistry.addRecipe(recStack, new Object[]{"BBX", "XIX", "XIX", Character.valueOf('B'), Items.CLAY_BALL, Character.valueOf('4'), Items.STICK,});
 	}
 
 	public void generateNether(World world, Random random, int chunkX, int chunkZ) {

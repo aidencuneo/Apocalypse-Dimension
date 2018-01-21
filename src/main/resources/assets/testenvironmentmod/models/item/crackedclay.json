@@ -1,5 +1,5 @@
 {
-    "parent": "apocalypsedimension:block/tumbleweed",
+    "parent": "testenvironmentmod:block/crackedclay",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],

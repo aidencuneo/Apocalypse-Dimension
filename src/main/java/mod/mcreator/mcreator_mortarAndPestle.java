@@ -71,7 +71,6 @@ public class mcreator_mortarAndPestle {
 			setRegistryName("MortarAndPestle");
 			GameRegistry.register(this);
 			setCreativeTab(CreativeTabs.MISC);
-			setContainerItem(this);
 		}
 
 		@Override

@@ -24,17 +24,17 @@ import net.minecraft.entity.player.EntityPlayer;
 
 import java.util.Random;
 
-@Mod(modid = testenvironmentmod.MODID, version = testenvironmentmod.VERSION)
-public class testenvironmentmod implements IFuelHandler, IWorldGenerator {
+@Mod(modid = TestEnvironmentMod.MODID, version = TestEnvironmentMod.VERSION)
+public class TestEnvironmentMod implements IFuelHandler, IWorldGenerator {
 
 	public static final String MODID = "testenvironmentmod";
-	public static final String VERSION = "1.4.1";
+	public static final String VERSION = "1.0";
 
-	@SidedProxy(clientSide = "mod.mcreator.ClientProxytestenvironmentmod", serverSide = "mod.mcreator.CommonProxytestenvironmentmod")
-	public static CommonProxytestenvironmentmod proxy;
+	@SidedProxy(clientSide = "mod.mcreator.ClientProxyTestEnvironmentMod", serverSide = "mod.mcreator.CommonProxyTestEnvironmentMod")
+	public static CommonProxyTestEnvironmentMod proxy;
 
 	@Instance(MODID)
-	public static testenvironmentmod instance;
+	public static TestEnvironmentMod instance;
 
 	mcreator_woodPlanks mcreator_0 = new mcreator_woodPlanks();
 	mcreator_mushroomSnack mcreator_1 = new mcreator_mushroomSnack();
@@ -89,6 +89,8 @@ public class testenvironmentmod implements IFuelHandler, IWorldGenerator {
 	mcreator_ceramicHoe mcreator_50 = new mcreator_ceramicHoe();
 	mcreator_mortarAndPestle mcreator_51 = new mcreator_mortarAndPestle();
 	mcreator_thirstDroplet1 mcreator_52 = new mcreator_thirstDroplet1();
+	mcreator_mortarAppleLiquid mcreator_53 = new mcreator_mortarAppleLiquid();
+	mcreator_craftMortarAppleLiquid mcreator_54 = new mcreator_craftMortarAppleLiquid();
 
 	@Override
 	public int getBurnTime(ItemStack fuel) {
@@ -198,6 +200,10 @@ public class testenvironmentmod implements IFuelHandler, IWorldGenerator {
 			return mcreator_51.addFuel(fuel);
 		if (mcreator_52.addFuel(fuel) != 0)
 			return mcreator_52.addFuel(fuel);
+		if (mcreator_53.addFuel(fuel) != 0)
+			return mcreator_53.addFuel(fuel);
+		if (mcreator_54.addFuel(fuel) != 0)
+			return mcreator_54.addFuel(fuel);
 		return 0;
 	}
 
@@ -418,6 +424,14 @@ public class testenvironmentmod implements IFuelHandler, IWorldGenerator {
 			mcreator_52.generateNether(world, random, chunkX, chunkZ);
 		if (world.provider.getDimension() == 0)
 			mcreator_52.generateSurface(world, random, chunkX, chunkZ);
+		if (world.provider.getDimension() == -1)
+			mcreator_53.generateNether(world, random, chunkX, chunkZ);
+		if (world.provider.getDimension() == 0)
+			mcreator_53.generateSurface(world, random, chunkX, chunkZ);
+		if (world.provider.getDimension() == -1)
+			mcreator_54.generateNether(world, random, chunkX, chunkZ);
+		if (world.provider.getDimension() == 0)
+			mcreator_54.generateSurface(world, random, chunkX, chunkZ);
 
 	}
 
@@ -429,7 +443,7 @@ public class testenvironmentmod implements IFuelHandler, IWorldGenerator {
 		if (event.getSide() == Side.CLIENT) {
 			OBJLoader.INSTANCE.addDomain("testenvironmentmod");
 		}
-		MinecraftForge.EVENT_BUS.register(new mcreator_GlobalEventstestenvironmentmod());
+		MinecraftForge.EVENT_BUS.register(new mcreator_GlobalEventsTestEnvironmentMod());
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new GuiHandler());
 		mcreator_0.load(event);
 		mcreator_1.load(event);
@@ -484,6 +498,8 @@ public class testenvironmentmod implements IFuelHandler, IWorldGenerator {
 		mcreator_50.load(event);
 		mcreator_51.load(event);
 		mcreator_52.load(event);
+		mcreator_53.load(event);
+		mcreator_54.load(event);
 		proxy.registerRenderers(this);
 
 	}
@@ -543,6 +559,8 @@ public class testenvironmentmod implements IFuelHandler, IWorldGenerator {
 		mcreator_50.serverLoad(event);
 		mcreator_51.serverLoad(event);
 		mcreator_52.serverLoad(event);
+		mcreator_53.serverLoad(event);
+		mcreator_54.serverLoad(event);
 	}
 
 	@EventHandler
@@ -600,6 +618,8 @@ public class testenvironmentmod implements IFuelHandler, IWorldGenerator {
 		mcreator_50.instance = this.instance;
 		mcreator_51.instance = this.instance;
 		mcreator_52.instance = this.instance;
+		mcreator_53.instance = this.instance;
+		mcreator_54.instance = this.instance;
 		mcreator_0.preInit(event);
 		mcreator_1.preInit(event);
 		mcreator_2.preInit(event);
@@ -653,6 +673,8 @@ public class testenvironmentmod implements IFuelHandler, IWorldGenerator {
 		mcreator_50.preInit(event);
 		mcreator_51.preInit(event);
 		mcreator_52.preInit(event);
+		mcreator_53.preInit(event);
+		mcreator_54.preInit(event);
 
 	}
 

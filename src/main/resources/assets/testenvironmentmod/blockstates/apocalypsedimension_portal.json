@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=z": { "model": "testenvironmentmod:apocalypsedimension_portal_ew" },
+        "axis=x": { "model": "testenvironmentmod:apocalypsedimension_portal_ns" },
+		"inventory": { "model": "testenvironmentmod:apocalypsedimension_portal_ns" }
+    }
+}

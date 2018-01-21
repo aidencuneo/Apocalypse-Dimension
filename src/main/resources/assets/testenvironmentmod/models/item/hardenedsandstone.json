@@ -1,5 +1,5 @@
 {
-    "parent": "apocalypsedimension:block/campfirepile",
+    "parent": "testenvironmentmod:block/hardenedsandstone",
     "display": {
         "thirdperson": {
             "rotation": [ 10, -45, 170 ],
